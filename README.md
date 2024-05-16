@@ -45,6 +45,6 @@ Reposítório para a Atividade Individual de avaliação na disciplina de WebAPI
     "cliente - O nome do cliente tem que ter mais de 3 caracteres!"
 ]
 
-### Tal tratamento de erro é feito a partir da classe PEdidoCOntrollerHandler, que faz um Override no método *handleMethodArgumentNotValid*
+### Tal tratamento de erro é feito a partir da classe PedidoCOntrollerHandler, que faz um Override no método *handleMethodArgumentNotValid*
 
 

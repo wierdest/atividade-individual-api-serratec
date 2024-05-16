@@ -24,5 +24,5 @@ Reposítório para a Atividade Individual de avaliação na disciplina de WebAPI
 ### Tal request é feita usando *findByClienteContainingIgnoreCase*, um JPA Query Method que permite a pesquisa por parte da string, ignorando a capitulação.
 
 ### Também é possível requisitar pedidos pelo nome do cliente, ao mesmo tempo passando um valor limite, para que seja possível encontrar pedidos acima de tal valor.
-### Tal request é feita usando *findByClienteAndValorGreaterThan*, mais um JPA Query Method que permite a pesquisa por cliente e por valores acima no informado.
+### Tal request é feita usando *findByClienteAndValorGreaterThan*, mais um JPA Query Method que permite a pesquisa por cliente e por valores acima do informado.
 ### Para executar essa request foi criado um DTO auxiliar, PedidoClienteMaisCaroDTO.

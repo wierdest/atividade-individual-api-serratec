@@ -26,3 +26,25 @@ Reposítório para a Atividade Individual de avaliação na disciplina de WebAPI
 ### Também é possível requisitar pedidos pelo nome do cliente, ao mesmo tempo passando um valor limite, para que seja possível encontrar pedidos acima de tal valor.
 ### Tal request é feita usando *findByClienteAndValorGreaterThan*, mais um JPA Query Method que permite a pesquisa por cliente e por valores acima do informado.
 ### Para executar essa request foi criado um DTO auxiliar, PedidoClienteMaisCaroDTO.
+
+## Há um tratamento de erros básico para impedir a inserção de campos nulos ou vazios.
+     {
+        "valor": ,
+        "cliente": "",
+        "descricao": "",
+        "data": ""
+    }
+
+### A request acima geraria a resposta:
+
+[
+    "cliente - Relaxa e medita! O nome do cliente não pode ser em branco!",
+    "descricao - A descrição tem que ser maior do que 3 caracteres!",
+    "descricao - must not be blank",
+    "data - Tempo pode ser uma ilusão, mas a data do pedido não pode ser nula!!!",
+    "cliente - O nome do cliente tem que ter mais de 3 caracteres!"
+]
+
+### Tal tratamento de erro é feito a partir da classe PEdidoCOntrollerHandler, que faz um Override no método *handleMethodArgumentNotValid*
+
+

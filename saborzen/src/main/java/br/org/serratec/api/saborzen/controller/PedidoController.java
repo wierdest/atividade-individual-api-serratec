@@ -66,8 +66,8 @@ public class PedidoController {
 	
 	
 	@PostMapping
-	public ResponseEntity<List<PedidoDTO>> registrarPedido(@Valid @RequestBody PedidoDTO[] pedidos) {
-		return new ResponseEntity<List<PedidoDTO>>(service.registrarPedidos(pedidos), HttpStatus.CREATED);
+	public ResponseEntity<PedidoDTO> registrarPedido(@Valid @RequestBody PedidoDTO pedido) {
+		return new ResponseEntity<PedidoDTO>(service.registrarPedido(pedido), HttpStatus.CREATED);
 	}
 	
 	@DeleteMapping("/{id}")

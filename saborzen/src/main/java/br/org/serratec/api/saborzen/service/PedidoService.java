@@ -50,12 +50,19 @@ public class PedidoService {
 		return pedidosDTO;
 	}
 	
+	// Não consegui lidar com a Validação no caso de passar um array de pedidos
 	public List<PedidoDTO> registrarPedidos(PedidoDTO[] pedidos) {
 		List<PedidoDTO> pedidosDTO = new ArrayList<PedidoDTO>();
 		for(PedidoDTO p : pedidos) {
 			pedidosDTO.add(repository.save(p.toEntity()).toDTO());
 		}
 		return pedidosDTO;
+	}
+	
+	public PedidoDTO registrarPedido(PedidoDTO pedido) {
+		Pedido pedidoEntity = repository.save(pedido.toEntity());
+	
+		return pedidoEntity.toDTO();
 	}
 	
 	public Optional<PedidoDTO> alterarPedido(Long id, PedidoDTO novo) {

@@ -27,4 +27,5 @@ public class PedidoControllerHandler extends ResponseEntityExceptionHandler {
 		return new ResponseEntity<Object>(erros, HttpStatus.NOT_ACCEPTABLE);
 		
 	}
+	
 }
